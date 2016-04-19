@@ -1,5 +1,6 @@
 from jinja2 import Template
 import os
+import shutil
 
 # Read HTML template and render using Jinja2
 file = open('src/index.html', 'r')
@@ -17,3 +18,6 @@ if not os.path.exists(outDir):
 file = open("out/index.html", "w")
 file.write(templateRendered)
 file.close()
+
+# Copy assets to out dir
+shutil.copytree('src/assets', outDir + 'assets')
