@@ -20,4 +20,7 @@ file.write(templateRendered)
 file.close()
 
 # Copy assets to out dir
-shutil.copytree('src/assets', outDir + 'assets')
+outAssetDir = outDir + 'assets'
+if os.path.exists(outAssetDir):
+    shutil.rmtree(outAssetDir)
+shutil.copytree('src/assets', outAssetDir)
