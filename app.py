@@ -1,3 +1,12 @@
 from jinja2 import Template
-template = Template('Hello {{ name }}!')
-print template.render(name='John Doe')
+
+file = open('src/index.html', 'r')
+
+template = Template(file.read())
+print template.render({
+    'title': 'Mac Java'
+})
+
+# file = open("newfile.txt", "w")
+# file.write("test")
+# file.close()
