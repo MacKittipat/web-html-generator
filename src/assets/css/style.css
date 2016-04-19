@@ -1,0 +1,50 @@
+* {
+    font-size: 24px;
+}
+
+body {
+    background-color: #ECF0F1;
+}
+
+.sec-name {
+    background-color: #4A89DC;
+    color: #ECF0F1;
+    word-wrap: break-word;
+}
+
+.sec-about {
+    background-color: #5D9CEC;
+    color: #ECF0F1;
+}
+
+.sec-white {
+    background-color: #FFFFFF;
+}
+
+.sec {
+    padding-bottom: 45px;
+}
+.sec h1 {
+    text-decoration: underline;
+}
+.sec h2 {
+    font-weight: bold;
+}
+
+span.highlight {
+    color: #434A54;
+}
+
+a {
+    color: #FC6E51;
+}
+a:hover {
+    color: #E9573F;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+
+
