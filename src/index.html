@@ -4,19 +4,51 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/lib/bootstrap/bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/lib/normalize.css">
+        <link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
-        <title>{{ title }}</title>
+        <title>{{title}}</title>
     </head>
     <body>
-        <div class="sec-name">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="text-center">{{ title }}</h1>
+
+        <div class="container">
+            <div class="row row-section">
+                <div class="col-md-12">
+                    <img class="img-circle center-block" src="assets/image/me.jpg" style="max-width: 150px;" />
+                </div>
+                <div class="col-md-12">
+                    <h1 class="text-header text-center">{{title}}</h1>
+                    <div class="text-center">
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                        {{email}}
+                        &nbsp;&nbsp;
+                        <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                        {{phone}}
                     </div>
                 </div>
             </div>
+            <div class="row row-section">
+                <div class="col-md-12 topic">
+                    <strong>{{aboutMe['title']}}</strong>
+                </div>
+                <div class="col-md-12 content">
+                    {{aboutMe['content']}}
+                </div>
+            </div>
+            <div class="row row-section">
+                <div class="col-md-12 topic">
+                    <strong>{{skills['title']}}</strong>
+                </div>
+                <div class="col-md-12 content">
+                    {% for item in skills['content'] %}
+                        <div class="col-md-3 list-item">
+                            {{item}}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
+
     </body>
 </html>

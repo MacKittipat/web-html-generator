@@ -1,13 +1,12 @@
 from jinja2 import Template
+from data import templateVar
 import os
 import shutil
 
 # Read HTML template and render using Jinja2
 file = open('src/index.html', 'r')
 template = Template(file.read())
-templateRendered = template.render({
-    'title': 'Mac Java'
-})
+templateRendered = template.render(templateVar)
 
 # Create out dir if it does not exist
 outDir = 'out/'
